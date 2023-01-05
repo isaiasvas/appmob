@@ -1,0 +1,17 @@
+<?php return array (
+  'auth.forgot-password' => 'App\\Http\\Livewire\\Auth\\ForgotPassword',
+  'auth.login' => 'App\\Http\\Livewire\\Auth\\Login',
+  'auth.logout' => 'App\\Http\\Livewire\\Auth\\Logout',
+  'auth.reset-password' => 'App\\Http\\Livewire\\Auth\\ResetPassword',
+  'auth.sign-up' => 'App\\Http\\Livewire\\Auth\\SignUp',
+  'billing' => 'App\\Http\\Livewire\\Billing',
+  'counter' => 'App\\Http\\Livewire\\Counter',
+  'dashboard' => 'App\\Http\\Livewire\\Dashboard',
+  'laravel-examples.user-management' => 'App\\Http\\Livewire\\LaravelExamples\\UserManagement',
+  'laravel-examples.user-profile' => 'App\\Http\\Livewire\\LaravelExamples\\UserProfile',
+  'profile' => 'App\\Http\\Livewire\\Profile',
+  'rtl' => 'App\\Http\\Livewire\\Rtl',
+  'static-sign-in' => 'App\\Http\\Livewire\\StaticSignIn',
+  'static-sign-up' => 'App\\Http\\Livewire\\StaticSignUp',
+  'tables' => 'App\\Http\\Livewire\\Tables',
+);
