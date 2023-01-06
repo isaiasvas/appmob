@@ -8,6 +8,7 @@ use App\Http\Livewire\Auth\SignUp;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Billing;
+use App\Http\Livewire\Counter;
 use App\Http\Livewire\Profile;
 use App\Http\Livewire\Tables;
 use App\Http\Livewire\StaticSignIn;
@@ -34,9 +35,10 @@ Route::get('/', function() {
     return redirect('/login');
 });
 
+
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
-
+Route::get('/teste', Counter::class)->name('counter');
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
 
 Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');
