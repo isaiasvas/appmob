@@ -159,6 +159,7 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'C' => 
         array (
             'Cron\\' => 5,
+            'Codexshaper\\WooCommerce\\' => 24,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -167,6 +168,7 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         ),
         'A' => 
         array (
+            'Automattic\\WooCommerce\\' => 23,
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
         ),
@@ -180,8 +182,8 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -483,6 +485,10 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Codexshaper\\WooCommerce\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -490,6 +496,10 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
+        'Automattic\\WooCommerce\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce',
         ),
         'Asm89\\Stack\\' => 
         array (
@@ -522,6 +532,7 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'App\\Http\\Livewire\\Auth\\ResetPassword' => __DIR__ . '/../..' . '/app/Http/Livewire/Auth/ResetPassword.php',
         'App\\Http\\Livewire\\Auth\\SignUp' => __DIR__ . '/../..' . '/app/Http/Livewire/Auth/SignUp.php',
         'App\\Http\\Livewire\\Billing' => __DIR__ . '/../..' . '/app/Http/Livewire/Billing.php',
+        'App\\Http\\Livewire\\Counter' => __DIR__ . '/../..' . '/app/Http/Livewire/Counter.php',
         'App\\Http\\Livewire\\Dashboard' => __DIR__ . '/../..' . '/app/Http/Livewire/Dashboard.php',
         'App\\Http\\Livewire\\LaravelExamples\\UserManagement' => __DIR__ . '/../..' . '/app/Http/Livewire/LaravelExamples/UserManagement.php',
         'App\\Http\\Livewire\\LaravelExamples\\UserProfile' => __DIR__ . '/../..' . '/app/Http/Livewire/LaravelExamples/UserProfile.php',
@@ -550,6 +561,14 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Automattic\\WooCommerce\\Client' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/Client.php',
+        'Automattic\\WooCommerce\\HttpClient\\BasicAuth' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/BasicAuth.php',
+        'Automattic\\WooCommerce\\HttpClient\\HttpClient' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/HttpClient.php',
+        'Automattic\\WooCommerce\\HttpClient\\HttpClientException' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/HttpClientException.php',
+        'Automattic\\WooCommerce\\HttpClient\\OAuth' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/OAuth.php',
+        'Automattic\\WooCommerce\\HttpClient\\Options' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Options.php',
+        'Automattic\\WooCommerce\\HttpClient\\Request' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Request.php',
+        'Automattic\\WooCommerce\\HttpClient\\Response' => __DIR__ . '/..' . '/automattic/woocommerce/src/WooCommerce/HttpClient/Response.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -643,6 +662,61 @@ class ComposerStaticInit9147deddd9687b414800459032d1f537
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Carbon\\TranslatorImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorImmutable.php',
         'Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
+        'Codexshaper\\WooCommerce\\Facades\\Attribute' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Attribute.php',
+        'Codexshaper\\WooCommerce\\Facades\\Category' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Category.php',
+        'Codexshaper\\WooCommerce\\Facades\\Coupon' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Coupon.php',
+        'Codexshaper\\WooCommerce\\Facades\\Customer' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Customer.php',
+        'Codexshaper\\WooCommerce\\Facades\\Note' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Note.php',
+        'Codexshaper\\WooCommerce\\Facades\\Order' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Order.php',
+        'Codexshaper\\WooCommerce\\Facades\\PaymentGateway' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/PaymentGateway.php',
+        'Codexshaper\\WooCommerce\\Facades\\Product' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Product.php',
+        'Codexshaper\\WooCommerce\\Facades\\Query' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Query.php',
+        'Codexshaper\\WooCommerce\\Facades\\Refund' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Refund.php',
+        'Codexshaper\\WooCommerce\\Facades\\Report' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Report.php',
+        'Codexshaper\\WooCommerce\\Facades\\Review' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Review.php',
+        'Codexshaper\\WooCommerce\\Facades\\Setting' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Setting.php',
+        'Codexshaper\\WooCommerce\\Facades\\ShippingMethod' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/ShippingMethod.php',
+        'Codexshaper\\WooCommerce\\Facades\\ShippingZone' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/ShippingZone.php',
+        'Codexshaper\\WooCommerce\\Facades\\ShippingZoneMethod' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/ShippingZoneMethod.php',
+        'Codexshaper\\WooCommerce\\Facades\\Subscription' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Subscription.php',
+        'Codexshaper\\WooCommerce\\Facades\\System' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/System.php',
+        'Codexshaper\\WooCommerce\\Facades\\Tag' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Tag.php',
+        'Codexshaper\\WooCommerce\\Facades\\Tax' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Tax.php',
+        'Codexshaper\\WooCommerce\\Facades\\TaxClass' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/TaxClass.php',
+        'Codexshaper\\WooCommerce\\Facades\\Term' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Term.php',
+        'Codexshaper\\WooCommerce\\Facades\\Variation' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Variation.php',
+        'Codexshaper\\WooCommerce\\Facades\\Webhook' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/Webhook.php',
+        'Codexshaper\\WooCommerce\\Facades\\WooAnalytics' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/WooAnalytics.php',
+        'Codexshaper\\WooCommerce\\Facades\\WooCommerce' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Facades/WooCommerce.php',
+        'Codexshaper\\WooCommerce\\Models\\Attribute' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Attribute.php',
+        'Codexshaper\\WooCommerce\\Models\\BaseModel' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/BaseModel.php',
+        'Codexshaper\\WooCommerce\\Models\\Category' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Category.php',
+        'Codexshaper\\WooCommerce\\Models\\Coupon' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Coupon.php',
+        'Codexshaper\\WooCommerce\\Models\\Customer' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Customer.php',
+        'Codexshaper\\WooCommerce\\Models\\Note' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Note.php',
+        'Codexshaper\\WooCommerce\\Models\\Order' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Order.php',
+        'Codexshaper\\WooCommerce\\Models\\PaymentGateway' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/PaymentGateway.php',
+        'Codexshaper\\WooCommerce\\Models\\Product' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Product.php',
+        'Codexshaper\\WooCommerce\\Models\\Refund' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Refund.php',
+        'Codexshaper\\WooCommerce\\Models\\Report' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Report.php',
+        'Codexshaper\\WooCommerce\\Models\\Review' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Review.php',
+        'Codexshaper\\WooCommerce\\Models\\Setting' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Setting.php',
+        'Codexshaper\\WooCommerce\\Models\\ShippingMethod' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/ShippingMethod.php',
+        'Codexshaper\\WooCommerce\\Models\\ShippingZone' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/ShippingZone.php',
+        'Codexshaper\\WooCommerce\\Models\\Subscription' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Subscription.php',
+        'Codexshaper\\WooCommerce\\Models\\System' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/System.php',
+        'Codexshaper\\WooCommerce\\Models\\Tag' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Tag.php',
+        'Codexshaper\\WooCommerce\\Models\\Tax' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Tax.php',
+        'Codexshaper\\WooCommerce\\Models\\TaxClass' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/TaxClass.php',
+        'Codexshaper\\WooCommerce\\Models\\Term' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Term.php',
+        'Codexshaper\\WooCommerce\\Models\\Variation' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Variation.php',
+        'Codexshaper\\WooCommerce\\Models\\Webhook' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Models/Webhook.php',
+        'Codexshaper\\WooCommerce\\Query' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Query.php',
+        'Codexshaper\\WooCommerce\\Traits\\QueryBuilderTrait' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Traits/QueryBuilderTrait.php',
+        'Codexshaper\\WooCommerce\\Traits\\WooCommerceTrait' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/Traits/WooCommerceTrait.php',
+        'Codexshaper\\WooCommerce\\WooCommerceAnalyticsApi' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/WooCommerceAnalyticsApi.php',
+        'Codexshaper\\WooCommerce\\WooCommerceApi' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/WooCommerceApi.php',
+        'Codexshaper\\WooCommerce\\WooCommerceServiceProvider' => __DIR__ . '/..' . '/codexshaper/laravel-woocommerce/src/WooCommerceServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
