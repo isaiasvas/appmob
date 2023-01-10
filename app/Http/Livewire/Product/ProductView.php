@@ -8,11 +8,12 @@ use Codexshaper\WooCommerce\Facades\Product;
 class ProductView extends Component
 {
 
-    public $products = 'oi';
+    public $products;
 
-    
+
     public function render()
     {
+        $products = Product::all();
         return view('livewire.product.product-view');
     }
 }
