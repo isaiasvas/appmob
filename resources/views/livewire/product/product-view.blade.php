@@ -13,9 +13,9 @@
                                         <p class="mb-5"> Dados:</p>
                                         Nome: {{$name}}
 
-                                        preço: {{price}}
+                                        preço: {{$price}}
 
-                                        descrição: {{description}}
+                                        descrição: {{$description}}
                                     </div>
                                 </div>
                             </div>
