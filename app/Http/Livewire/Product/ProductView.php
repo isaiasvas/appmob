@@ -9,11 +9,20 @@ class ProductView extends Component
 {
 
     
-    public $products;
+   
+    public $name;
+    public $price;
+    public $description;
+
 
     public function mount()
     {
-        $this->products = Product::all();
+        $products = Product::all();
+        foreach ($products as $product) {
+            $this->name = $product->name;
+            $this->price = $product->price;
+            $this->description = $product->description;
+        }
     }
 
     public function render()
