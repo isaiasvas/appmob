@@ -8,8 +8,7 @@ use Codexshaper\WooCommerce\Facades\Product;
 class ProductView extends Component
 {
 
-    public $products = Product::all();
-
+    public $products = 'oi';
 
     public function render()
     {
