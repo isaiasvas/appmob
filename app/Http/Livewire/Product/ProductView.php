@@ -11,9 +11,9 @@ class ProductView extends Component
     
     public $products;
 
-    public function mount(){
-        $product = Product::all();
-        $products = $product;
+    public function mount()
+    {
+        $this->products = Product::all();
     }
 
     public function render()
