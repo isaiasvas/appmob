@@ -11,11 +11,11 @@
                                         <p class="mb-1 pt-2 text-bold">teste</p>
                                         <h5 class="font-weight-bolder">Retornando Produto</h5>
                                         <p class="mb-5"> Dados:</p>
-                                        Nome: {{$name}}
+                                        <h5>Nome: {{$name}}</h5>
 
-                                        preço: {{$price}}
+                                        <p>preço: {{$price}}</p>
 
-                                        descrição: {{$description}}
+                                        <p>descrição: {{$description}}</p>
                                     </div>
                                 </div>
                             </div>
