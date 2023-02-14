@@ -26,6 +26,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($products as $product)
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
@@ -36,8 +37,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <p class="text-xs font-weight-bold mb-0">Valor de Venda</p>
-                                        <p class="text-xs text-secondary mb-0">Valor de Aluguel</p>
+                                        <p class="text-xs font-weight-bold mb-0">Aluguel</p>
+                                        <p class="text-xs text-secondary mb-0">{{$product->price}}</p>
                                     </td>
                                     <td class="align-middle text-center text-sm">
                                         <span class="badge badge-sm bg-gradient-success">Alugada</span>
@@ -52,6 +53,7 @@
                                         </a>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

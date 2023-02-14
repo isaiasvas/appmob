@@ -35,12 +35,12 @@ Route::get('/', function() {
     return redirect('/login');
 });
 
-
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
-Route::get('/products', Product\ProductView::class)->name('product.view');
+Route::get('/products', Product\ProductView::class)->name('lista-de-produtos');
+Route::get('/products/add', Product\ProductAdd::class)->name('adicionar-produto');
+Route::post('/products/add', [Product\ProductAdd::class, 'productCreate']);
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
-
 Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');
 
 Route::middleware('auth')->group(function () {
