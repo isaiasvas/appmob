@@ -28,11 +28,11 @@ class ProductAdd extends Component
             $image->storeAs('/images', $name_gen, 'real_public');
 
 		    array_push($images, [
-			    "src" => url('/images/').$name_gen,
+			    "src" => url('/images/').'/'.$name_gen,
             ]);       
         }
 
-        
+
         $data = [
             'name' => $name,
             'type' => 'simple',
