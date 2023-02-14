@@ -32,6 +32,7 @@ class ProductAdd extends Component
             ]);       
         }
 
+        
         $data = [
             'name' => $name,
             'type' => 'simple',
