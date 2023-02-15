@@ -26,10 +26,11 @@ class ProductAdd extends Component
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storeAs('/images', $name_gen, 'public');
                         
-            array_push($images, [
+            array_combine($images,[
 			    "src" => asset('storage/images/'.$name_gen),
             ]);       
         }
+        
 
         $data = [
             'name' => $name,
