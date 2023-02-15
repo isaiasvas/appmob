@@ -25,7 +25,7 @@ class ProductAdd extends Component
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
-            $image->storeAs('/images', $name_gen, 'real_public');
+            dump($image->storeAs('/images', $name_gen, 'public'));
             array_push($images, [
 			    "src" => asset('/images/'.$name_gen),
             ]);       
@@ -41,8 +41,8 @@ class ProductAdd extends Component
             'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
             'images' => $images
         ];
-
-        $product = Product::create($data);
+        
+        //$product = Product::create($data);
     }
     public function render()
     {
