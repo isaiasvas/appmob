@@ -20,12 +20,13 @@ class ProductAdd extends Component
         $name = $this->product_categories . ' ' . $this->product_sub_categories;
         $price = $this->product_price;
         $getImages = $this->product_images;
-        $images = ["images"];
+        $images = [];
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storeAs('/images', $name_gen, 'public');
-                        
+               
+            array_push($images, ["src" => asset('storage/images/'.$name_gen)]);
             //"src" => asset('storage/images/'.$name_gen)
                    
         }
@@ -38,6 +39,7 @@ class ProductAdd extends Component
             'regular_price' => $price,
             'description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
             'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+            'images2' => $images,
             'images' => [
                 [
                     'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
