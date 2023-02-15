@@ -21,7 +21,6 @@ class ProductAdd extends Component
         $price = $this->product_price;
         $getImages = $this->product_images;
         
-        $images = array();
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
@@ -39,7 +38,9 @@ class ProductAdd extends Component
             'regular_price' => $price,
             'description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
             'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-            'images' => $images
+            'images' => [
+                    $images
+                ]
         ];
 
         dump($data);
