@@ -21,11 +21,12 @@ class ProductAdd extends Component
         $price = $this->product_price;
         $getImages = $this->product_images;
         
-        
+        $images = array();
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storeAs('/images', $name_gen, 'public');
+            
             array_push($images, [
 			    "src" => asset('storage/images/'.$name_gen),
             ]);       
