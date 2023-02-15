@@ -43,7 +43,6 @@ class ProductAdd extends Component
             
         ];
 
-        dump($data);
         $product = Product::create($data);
     }
     public function render()
