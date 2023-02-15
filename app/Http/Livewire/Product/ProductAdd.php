@@ -43,9 +43,7 @@ class ProductAdd extends Component
             'images' => $images
         ];
 
-        dump($data);
-        
-        //$product = Product::create($data);
+        $product = Product::create($data);
     }
     public function render()
     {
