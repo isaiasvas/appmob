@@ -31,8 +31,7 @@ class ProductAdd extends Component
                    
         }
         
-
-        $data = [
+    $data = [
             'name' => $name,
             'type' => 'simple',
             'slug' => $name. '95293',
