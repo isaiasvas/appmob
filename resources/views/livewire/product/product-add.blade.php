@@ -171,16 +171,20 @@
                         </div>
                     </div>
                     <div class="row">
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="product_price" class="form-control-label">{{ __('Preço do Imóvel') }}</label>
                                 <div class="@error('product_price')border border-danger rounded-3 @enderror">
                                     <input wire:model="product_price" class="form-control money" type="text"
                                         placeholder="Digite o valor do imóvel" id="product_price">
+                                        {{$product_price}}
                                 </div>
                                 @error('product_price') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
+
+                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="product_location" class="form-control-label">{{ __('Endereço') }}</label>

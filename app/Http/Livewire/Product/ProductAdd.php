@@ -14,6 +14,11 @@ class ProductAdd extends Component
     public $product_location;
     public $product_images = [];
 
+    protected $rules = [
+        'name' => '',
+        'email' => ''
+    ];
+
 
     public function createProduct(){
       
