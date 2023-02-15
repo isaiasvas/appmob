@@ -42,7 +42,8 @@ class ProductAdd extends Component
             'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
             'images' => $images
         ];
-        $product = Product::create($data);
+        dump($data);
+        //$product = Product::create($data);
     }
     public function render()
     {
