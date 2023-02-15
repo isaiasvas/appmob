@@ -24,9 +24,9 @@ class ProductAdd extends Component
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
-            $image->storePubliclyAs('/images', $name_gen, 'public');
+            $image->storePubliclyAs('/images', $name_gen, 'real_public');
                
-            array_push($images, ["src" => asset('storage/images/'.$name_gen)]);
+            array_push($images, ["src" => asset('images/'.$name_gen)]);
             //"src" => asset('storage/images/'.$name_gen)
                    
         }
