@@ -26,7 +26,7 @@ class ProductAdd extends Component
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storePubliclyAs('/images', $name_gen, 'public');
                
-            array_push($images, ["src" => 'https://images.ecycle.com.br/wp-content/uploads/2021/05/20195924/o-que-e-paisagem.jpg.webp']);
+            array_push($images, ["src" => 'https://aapmr.org.br/Imagens/topo-nossa-historia.jpg']);
             //"src" => asset('storage/images/'.$name_gen)
                    
         }
