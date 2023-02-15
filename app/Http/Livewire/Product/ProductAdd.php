@@ -20,7 +20,7 @@ class ProductAdd extends Component
         $name = $this->product_categories . ' ' . $this->product_sub_categories;
         $price = $this->product_price;
         $getImages = $this->product_images;
-        $images[] = ["images"];
+        $images[] = ["images"=>""];
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
