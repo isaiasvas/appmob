@@ -25,12 +25,11 @@ class ProductAdd extends Component
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
-            dump($image->storeAs('/images', $name_gen, 'public'));
+            $image->storeAs('/images', $name_gen, 'public');
             array_push($images, [
-			    "src" => asset('/images/'.$name_gen),
+			    "src" => asset('storage/images/'.$name_gen),
             ]);       
         }
-
 
         $data = [
             'name' => $name,
@@ -41,7 +40,8 @@ class ProductAdd extends Component
             'short_description' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
             'images' => $images
         ];
-        
+
+        dump($data);
         //$product = Product::create($data);
     }
     public function render()
