@@ -26,8 +26,8 @@ class ProductAdd extends Component
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storeAs('/images', $name_gen, 'real_public');
-            dump($photo->temporaryUrl());
-		    array_push($images, [
+            
+            array_push($images, [
 			    "src" => asset('/images/'.$name_gen),
             ]);       
         }
@@ -43,7 +43,7 @@ class ProductAdd extends Component
             'images' => $images
         ];
 
-        //$product = Product::create($data);
+        $product = Product::create($data);
     }
     public function render()
     {
