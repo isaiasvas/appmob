@@ -28,7 +28,7 @@ class ProductAdd extends Component
             $image->storeAs('/images', $name_gen, 'real_public');
 
 		    array_push($images, [
-			    "src" => url('/images/').'/'.$name_gen,
+			    "src" => asset('/images/'.$name_gen),
             ]);       
         }
 
