@@ -26,7 +26,7 @@ class ProductAdd extends Component
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storePubliclyAs('/images', $name_gen, 'public');
                
-            array_push($images, ["src" => 'http://app.visioit.com.br/storage/images/724741798.png']);
+            array_push($images, ["src" => asset('storage/images/'.$name_gen)]);
             //"src" => asset('storage/images/'.$name_gen)
                    
         }
