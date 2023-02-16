@@ -129,15 +129,20 @@
                 <h6 class="mb-0">{{ __('Informações do Produto') }}</h6>
             </div>
             <div class="card-body pt-4 p-3">
-
+                @if ($showSuccesNotification)
+                <div class="alert alert-success" role="alert">
+                    <strong>Success!</strong> This is a success alert—check it out!
+                </div>
+                @endif
                 <form wire:submit.prevent="createProduct" action="#" method="POST" role="form text-left">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="product_categories" class="form-control-label">{{ __('Categoria') }}</label>
                                 <div class="@error('product_categories')border border-danger rounded-3 @enderror">
-                                    <select wire:model="product_categories" id="product_categories" class="form-control">
-                                        <option >Selecione uma categoria</option>
+                                    <select wire:model="product_categories" id="product_categories"
+                                        class="form-control">
+                                        <option>Selecione uma categoria</option>
                                         <option value="Apartamentos">Apartamentos</option>
                                         <option value="Casas">Casas</option>
                                         <option value="Comercial">Comercial</option>
@@ -150,11 +155,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="product_sub_categories" class="form-control-label">{{ __('Subcategoria') }}</label>
+                                <label for="product_sub_categories"
+                                    class="form-control-label">{{ __('Subcategoria') }}</label>
                                 <div class="@error('product_sub_categories')border border-danger rounded-3 @enderror">
-                                    
-                                    <select wire:model="product_sub_categories" id="product_sub_categories" class="form-control">
-                                        <option >Selecione uma subcategoria</option>
+                                    <select wire:model="product_sub_categories" id="product_sub_categories"
+                                        class="form-control">
+                                        <option>Selecione uma subcategoria</option>
                                         <option value="Área de Lazer">Área de Lazer</option>
                                         <option value="Comercial">Comercial</option>
                                         <option value="Condomínio">Condomínio</option>
@@ -164,27 +170,28 @@
                                         <option value="Sobrado">Sobrado</option>
                                         <option value="Sobrado Condomínio">Sobrado Condomínio</option>
                                     </select>
-                                   
+
                                 </div>
                                 @error('product_sub_categories') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
                     </div>
                     <div class="row">
-
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="product_price" class="form-control-label">{{ __('Preço do Imóvel') }}</label>
+                                <label for="product_price"
+                                    class="form-control-label">{{ __('Preço do Imóvel') }}</label>
                                 <div class="@error('product_price')border border-danger rounded-3 @enderror">
-                                    <input wire:model="product_price" class="form-control money" type="text"
-                                        placeholder="Digite o valor do imóvel" id="product_price">
-                                        {{$product_price}}
+
+                                    <div class="input-group">
+                                        <span class="input-group-text" style="padding:0px 5px" id="basic-addon1">R$</span>
+                                        <input wire:model="product_price" class="form-control money" type="text"
+                                            placeholder="Digite o valor do imóvel" id="product_price">
+                                    </div>
                                 </div>
                                 @error('product_price') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
-
-                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="product_location" class="form-control-label">{{ __('Endereço') }}</label>
@@ -201,11 +208,13 @@
                             <div class="form-group">
                                 <label for="product_images" class="form-control-label">{{_('Imagens')}}</label>
                                 <div class="@error('product_images') border border-danger rounded-3 @enderror">
-                                    <input wire:model="product_images" class="form-control" type="file" multiple id="product_images">
+                                    <input wire:model="product_images" class="form-control" type="file" multiple
+                                        id="product_images">
                                 </div>
-                                @error('product_images') <div class="text-danger">{{$message}}</div> @enderror
+                                @error('product_images.*') <div class="text-danger">{{$message}}</div> @enderror
                             </div>
                         </div>
+
                     </div>
                     <div class="d-flex justify-content-end">
                         <button type="submit"

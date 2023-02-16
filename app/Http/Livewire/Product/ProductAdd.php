@@ -14,26 +14,46 @@ class ProductAdd extends Component
     public $product_location;
     public $product_images = [];
 
+    public $showSuccesNotification = false;
+
+    //validação
     protected $rules = [
-        'name' => '',
-        'email' => ''
+        'product_categories' => 'required',
+        'product_sub_categories' => 'required',
+        'product_price' => 'required',
+        'product_images.*' => 'image|mimes:jpg,png,jpeg|max:2048'
+    ];
+    //mensagens customizadas
+    protected $messages = [
+        '*.required' => 'O campo :attribute é obrigatório.',
+        'product_images.*.image' => 'O Arquivo :attribute não é uma imagem',
+        'product_images.*.mimes' => 'A imagem precisa ser JPG, JPEG ou PNG.',
+        'product_images.*.max' => 'A imagem :attribute não pode ter mais que 2MB.'
     ];
 
-
+    //alteração do atributo (nome do campo)
+    protected $validationAttributes = [
+        'product_categories' => 'categoria',
+        'product_sub_categories' => 'subcategoria',
+        'product_price' => 'preço',
+        'product_images.*' => ':index+1'
+    ];
+  
     public function createProduct(){
-      
+        //roda a validação
+        $this->validate();
+
         $name = $this->product_categories . ' ' . $this->product_sub_categories;
         $price = $this->product_price;
         $getImages = $this->product_images;
         $images = [];
+
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
-            $image->storePubliclyAs('/images', $name_gen, 'real_public');
-               
+            $image->storePubliclyAs('/images', $name_gen, 'real_public');             
             array_push($images, ["src" => asset('images/'.$name_gen)]);
-            //"src" => asset('storage/images/'.$name_gen)
-                   
+               
         }
         
     $data = [
@@ -47,10 +67,12 @@ class ProductAdd extends Component
             
         ];
 
-        $product = Product::create($data);
+        //$product = Product::create($data);
+        $this->showSuccesNotification = true;
     }
     public function render()
     {
+    
         return view('livewire.product.product-add');
     }
 }
