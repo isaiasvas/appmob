@@ -66,8 +66,9 @@ class ProductAdd extends Component
             'images' => $images,
             
         ];
-
-        //$product = Product::create($data);
+        
+        $product = Product::create($data);
+        dump($product);
         $this->showSuccesNotification = true;
     }
     public function render()

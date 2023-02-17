@@ -39,14 +39,13 @@ class ProductEdit extends Component
         'product_categories' => 'categoria',
         'product_sub_categories' => 'subcategoria',
         'product_price' => 'preço',
-        'product_images.*' => ':index+1'
+        'product_images.*' => ':index'
     ];
   
 
-    public function mount()
+    public function mount($id)
     {
-        $product = Product::all(["sku" => '19191']);
-       
+        $product = Product::all(["sku" => $id]);
         $this->product_categories;
         $this->product_sub_categories;
         $this->product_price = $product[0]->price;
