@@ -51,11 +51,9 @@ class ProductEdit extends Component
         $this->product_price = $product[0]->price;
         $this->product_location;
         $this->product_images = [];
- 
     }
     public function render()
     {
-       
         return view('livewire.product.product-edit');
     }
 }

@@ -5,6 +5,8 @@ namespace App\Http\Livewire\Product;
 use Livewire\Component;
 use Codexshaper\WooCommerce\Facades\Product;
 use Livewire\WithFileUploads;
+use Codexshaper\WooCommerce\Facades\Category; 
+
 class ProductAdd extends Component
 {
     use WithFileUploads;
@@ -13,7 +15,7 @@ class ProductAdd extends Component
     public $product_price;
     public $product_location;
     public $product_images = [];
-
+    public $sub_categories = [];
     public $showSuccesNotification = false;
 
     //validação
@@ -36,25 +38,26 @@ class ProductAdd extends Component
         'product_categories' => 'categoria',
         'product_sub_categories' => 'subcategoria',
         'product_price' => 'preço',
-        'product_images.*' => ':index+1'
+        'product_images.*' => ':index'
     ];
-  
+
+
     public function createProduct(){
         //roda a validação
         $this->validate();
-
-        $name = $this->product_categories . ' ' . $this->product_sub_categories;
+        
+        $name = explode('|', $this->product_categories)[1] . ' ' . explode('|', $this->product_sub_categories)[1];
         $price = $this->product_price;
         $getImages = $this->product_images;
         $images = [];
-
+        
         foreach ($getImages as $photo) {
             $image = $photo;
             $name_gen = rand(10,1000000000).'.'.$image->getClientOriginalExtension();
             $image->storePubliclyAs('/images', $name_gen, 'real_public');             
             array_push($images, ["src" => asset('images/'.$name_gen)]);
                
-        }
+        };
         
     $data = [
             'name' => $name,
@@ -66,14 +69,21 @@ class ProductAdd extends Component
             'images' => $images,
             
         ];
-        
-        $product = Product::create($data);
-        dump($product);
+        dump($data);
+     /*   $product = Product::create($data);
+  
+    $data =    [
+        "sku" => '1523'.$product['id']
+    ];
+        Product::update($product['id'], $data);
         $this->showSuccesNotification = true;
+    */
     }
     public function render()
     {
-    
-        return view('livewire.product.product-add');
+        $categories = Category::all(['per_page'=> 50, 'parent' => 70]);
+        
+        return view('livewire.product.product-add', ['categories'=> $categories, 'subcategories'=> []]);
+        
     }
 }

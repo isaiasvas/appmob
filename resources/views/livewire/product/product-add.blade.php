@@ -140,14 +140,15 @@
                             <div class="form-group">
                                 <label for="product_categories" class="form-control-label">{{ __('Categoria') }}</label>
                                 <div class="@error('product_categories')border border-danger rounded-3 @enderror">
-                                    <select wire:model="product_categories" id="product_categories"
-                                        class="form-control">
+
+                                    <select wire:model="product_categories" wire:change="subCategories"
+                                        id="product_categories" class="form-control">
                                         <option>Selecione uma categoria</option>
-                                        <option value="Apartamentos">Apartamentos</option>
-                                        <option value="Casas">Casas</option>
-                                        <option value="Comercial">Comercial</option>
-                                        <option value="Rural">Rural</option>
-                                        <option value="Terreno">Terreno</option>
+                                        @foreach ($categories as $category)
+                                        <option value="{{ $category->id.'|'.$category->name }}"
+                                            name="{{$category->name}}">{{$category->name}}</option>
+
+                                        @endforeach
                                     </select>
                                 </div>
                                 @error('product_categories') <div class="text-danger">{{ $message }}</div> @enderror
@@ -161,16 +162,11 @@
                                     <select wire:model="product_sub_categories" id="product_sub_categories"
                                         class="form-control">
                                         <option>Selecione uma subcategoria</option>
-                                        <option value="Área de Lazer">Área de Lazer</option>
-                                        <option value="Comercial">Comercial</option>
-                                        <option value="Condomínio">Condomínio</option>
-                                        <option value="Edícula">Edícula</option>
-                                        <option value="Kitnet">Kitnet</option>
-                                        <option value="Padrão">Padrão</option>
-                                        <option value="Sobrado">Sobrado</option>
-                                        <option value="Sobrado Condomínio">Sobrado Condomínio</option>
+                                        @foreach($sub_categories as $val)
+                                        <option value="{{$val->id}}">
+                                            {{$val->name}}</option>
+                                        @endforeach
                                     </select>
-
                                 </div>
                                 @error('product_sub_categories') <div class="text-danger">{{ $message }}</div> @enderror
                             </div>
@@ -184,7 +180,8 @@
                                 <div class="@error('product_price')border border-danger rounded-3 @enderror">
 
                                     <div class="input-group">
-                                        <span class="input-group-text" style="padding:0px 5px" id="basic-addon1">R$</span>
+                                        <span class="input-group-text" style="padding:0px 5px"
+                                            id="basic-addon1">R$</span>
                                         <input wire:model="product_price" class="form-control money" type="text"
                                             placeholder="Digite o valor do imóvel" id="product_price">
                                     </div>
